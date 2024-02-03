@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     chpid = fork();
     if (chpid == 0) {
         if(num < 0) {
-            printf("I can't calculate the factorial of a negative number:(");
+            printf("I can't calculate the factorial of a negative number:(\n");
         } else if(num == 0){
             printf("Factorial 0 = 1\n");
         } else {
