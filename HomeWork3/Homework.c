@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
     int result;
     chpid = fork();
     if (chpid == 0) {
+        printf("Child:\n");
         if(num < 0) {
             printf("I can't calculate the factorial of a negative number:(\n");
         } else if(num == 0){
@@ -40,6 +41,7 @@ int main(int argc, char *argv[]) {
     } else if (chpid == -1) {
         printf("Error");
     } else {
+        printf("Parent:\n");
         if(num > 0) {
             result = fibonacci_plus(num);
         } else {
