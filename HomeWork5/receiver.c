@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-volatile int bit_count = 0;
-volatile int received_number = 0;
+volatile int bit_count = 0; // Номер бита
+volatile int received_number = 0; // Переданное число
 volatile int sender_pid = 0; // Храним pid передатчика
-volatile bool sending_ended = false;
+volatile bool sending_ended = false; // Завершение передачи
 
 void handle_sigusr1(int sig) {
     received_number = (received_number << 1) | 1;
